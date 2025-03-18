@@ -119,7 +119,7 @@ html {
 }
 
 .bg-digital {
-  background-image: url("/images/digital/bg.svg");
+  background-image: url("/Desgy/images/digital/bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -195,7 +195,7 @@ html {
 }
 
 .bg-testimonial {
-  background-image: url('/Desgy/images/wework/elipse.svg'), url('/Desgy/images/testimonial/boy.svg'), url('/Desgy/images/testimonial/girl.svg');
+  background-image: url('/Desgy/images/wework/elipse.svg'), url('/images/testimonial/boy.svg'), url('/images/testimonial/girl.svg');
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-position: 55%, 84% 26%, 12% 18%;
 }
@@ -238,7 +238,7 @@ html {
 .bg-joinus {
   background-image: url('/Desgy/images/joinus/horn.svg'), url('/Desgy/images/joinus/paint.svg');
   background-repeat: no-repeat, no-repeat;
-  background-position: 84% 109%, 12% 18%;
+  background-position: 84% 100%, 12% 18%;
 }
 
 .footer-icons {
