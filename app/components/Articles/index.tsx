@@ -121,7 +121,7 @@ export default class MultipleItems extends Component {
                             <div key={i} >
 
                                 <div className='bg-white m-3 px-3 pt-3 pb-12 my-10 shadow-lg rounded-3xl relative'>
-                                    <Image src={`${getImagePrefix}${items.imgSrc}`} alt="gaby" width={389} height={262} className="inline-block m-auto" />
+                                    <Image src={`${getImagePrefix()}${items.imgSrc}`} alt="gaby" width={389} height={262} className="inline-block m-auto" />
 
                                     <Link href="/">
                                         <h3 className="absolute bg-blue text-white hover:bg-black hover:shadow-xl py-3 px-6 rounded-full article-img">{items.time} read</h3>

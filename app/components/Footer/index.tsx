@@ -44,13 +44,13 @@ const footer = () => {
                         <h3 className='text-white text-4xl font-semibold leading-9 mb-4 lg:mb-20'> Desgy Solutions</h3>
                         <div className='flex gap-4'>
                             <div className='footer-icons'>
-                                <Link href="https://facebook.com"><Image src={`${getImagePrefix}images/footer/vec.svg`} alt="facebook" width={15} height={20} /></Link>
+                                <Link href="https://facebook.com"><Image src={`${getImagePrefix()}images/footer/vec.svg`} alt="facebook" width={15} height={20} /></Link>
                             </div>
                             <div className='footer-icons'>
-                                <Link href="https://twitter.com"><Image src={`${getImagePrefix}images/footer/twitter.svg`} alt="twitter" width={20} height={20} /></Link>
+                                <Link href="https://twitter.com"><Image src={`${getImagePrefix()}images/footer/twitter.svg`} alt="twitter" width={20} height={20} /></Link>
                             </div>
                             <div className='footer-icons'>
-                                <Link href="https://instagram.com"><Image src={`${getImagePrefix}images/footer/instagram.svg`} alt="instagram" width={20} height={20} /></Link>
+                                <Link href="https://instagram.com"><Image src={`${getImagePrefix()}images/footer/instagram.svg`} alt="instagram" width={20} height={20} /></Link>
                             </div>
                         </div>
                     </div>
