@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import React, { Component } from "react";
 import { StarIcon } from '@heroicons/react/24/solid';
 import Image from "next/image";
+import { getImagePrefix } from "@/utils";
 
 // CAROUSEL DATA
 
@@ -116,7 +117,7 @@ export default class MultipleItems extends Component {
                         {postData.map((items, i) => (
                             <div key={i} className="relative">
                                 <div className='bg-white test-sha m-3 p-10 my-20 rounded-3xl'>
-                                    <Image src={items.imgSrc} alt={items.imgSrc} width={71} height={71} className="inline-block m-auto absolute test-pos" />
+                                    <Image src={`${getImagePrefix}${items.imgSrc}`} alt={items.imgSrc} width={71} height={71} className="inline-block m-auto absolute test-pos" />
                                     <h4 className='text-base font-medium text-testColor my-4'>{items.comment}</h4>
                                     <hr style={{ color: "lightgrey" }} />
                                     <div className="flex justify-between">

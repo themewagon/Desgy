@@ -1,3 +1,4 @@
+import { getImagePrefix } from "@/utils";
 import Image from "next/image";
 
 const Digital = () => {
@@ -21,7 +22,7 @@ const Digital = () => {
 
                     <div>
                         <div className="lg:absolute girldoodle">
-                            <Image src="/images/digital/girldoodle.svg" alt="girldoodle" width={815} height={691} />
+                            <Image src={`${getImagePrefix}images/digital/girldoodle.svg`} alt="girldoodle" width={815} height={691} />
                         </div>
                     </div>
 
