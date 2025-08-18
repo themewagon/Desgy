@@ -8,13 +8,13 @@ interface NavigationItem {
     current: boolean;
 }
 
-const navigation: NavigationItem[] = [
-    { name: 'About Us', href: '#aboutus-section', current: true },
-    { name: 'Services', href: '#services-section', current: false },
-    { name: 'FAQ', href: '#faq-section', current: false },
-    { name: 'Blog', href: '#blog-section', current: false },
-    { name: 'Testimonial', href: '#testimonial-section', current: false },
-]
+const navigation = [
+    { name: 'WHAT WE DELIVER', href: '#approach-section', current: false },
+    { name: 'Our Services', href: '#services-section', current: false },
+    { name: 'Who Is It For', href: '#faq-section', current: false },
+    { name: 'About Us', href: '#aboutus-section', current: false },
+    { name: 'FAQ', href: '#faq-questions-section', current: false },
+];
 
 function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')
@@ -31,8 +31,9 @@ const Data = () => {
                                 key={item.name}
                                 href={item.href}
                                 className={classNames(
-                                    item.current ? 'bg-gray-900 text-purple' : 'text-black hover:bg-gray-700 hover:text-purple',
-                                    'block  py-2 rounded-md text-base font-medium'
+                                    item.current ? 'bg-white/20 text-white' : 'text-white hover:bg-white/15 hover:text-white',
+                                    'block py-4 rounded-lg text-lg font-semibold transition-all duration-300',
+                                    item.name === 'WHAT WE DELIVER' ? 'font-data tracking-widest uppercase text-sm font-bold' : ''
                                 )}
                                 aria-current={item.current ? 'page' : undefined}
                             >
@@ -40,10 +41,9 @@ const Data = () => {
                             </Link>
                         ))}
                         <div className="mt-4"></div>
-                        <button className="bg-navyblue w-full hover:text-white text-white border border-purple font-medium py-2 px-4 rounded">
-                            Contact Us
-                        </button>
-                        {/* <Contactusform /> */}
+                        <Link href="#contactus-section" className="bg-white text-primary w-full hover:bg-primary hover:text-white font-semibold py-4 px-6 rounded-full border-2 border-primary transition-all duration-200 font-body text-lg inline-block text-center">
+                            Contact us
+                        </Link>
                     </div>
                 </div>
             </div>

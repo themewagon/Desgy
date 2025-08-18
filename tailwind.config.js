@@ -21,26 +21,33 @@ module.exports = {
       current: 'currentColor',
       'white': '#ffffff',
       'black': '#000000',
-      'blue': '#0066FF',
-      'lightblue': '#d9e8ff',
-      'darkpurple': '#241A24',
-      'lightgrey': '#F4F5F6',
-      'navyblue': '#00224A',
-      'darkblue': '#1E013A',
+      // New Prism Lab color palette
+      'primary': '#2622B2', // Deep Indigo - Primary headers, anchors
+      'primary-light': '#5955EB', // Bright Violet - CTA buttons, highlights
+      'primary-lighter': '#E7E0FF', // Soft Lavender - Cards, sidebars, subtle accents
+      'secondary': '#E7E0FF', // Soft Lavender
+      'tertiary': '#FBFAFF', // Porcelain White - Backgrounds, whitespace
+      // Legacy colors for compatibility
+      'blue': '#5955EB', // Bright Violet
+      'lightblue': '#E7E0FF', // Soft Lavender
+      'darkpurple': '#2622B2', // Deep Indigo
+      'lightgrey': '#FBFAFF', // Porcelain White
+      'navyblue': '#49495A', // Charcoal Gray
+      'darkblue': '#2622B2', // Deep Indigo
       'offwhite': 'rgba(255, 255, 255, 0.75)',
-      'lightblack': 'rgba(0, 0, 0, 0.55)',
-      'bluish' : 'rgba(14, 13, 13, 0.75)',
+      'lightblack': '#49495A', // Charcoal Gray
+      'bluish' : '#5955EB', // Bright Violet
       'testColor' : 'rgba(54, 54, 54, 0.75)',
-      'grey': '#909090',
-      'bgblue' : '#02398A',
-      'darkgrey' : '#747474',
-      'faqblue' : '#0861FF',
+      'grey': '#49495A', // Charcoal Gray - Body text
+      'bgblue' : '#5955EB', // Bright Violet
+      'darkgrey' : '#49495A', // Charcoal Gray
+      'faqblue' : '#FBFAFF', // Porcelain White
       'gold' : '#FAAF38',
-      'hoblue': '#0000FF',
-      'btnblue' : "#267dff",
-      'bggrey' : '#DDDDDD',
+      'hoblue': '#2622B2', // Deep Indigo
+      'btnblue' : "#5955EB", // Bright Violet
+      'bggrey' : '#FBFAFF', // Porcelain White
       'footer' : 'rgba(226, 223, 223, 0.75)',
-      'linegrey' : "#C4C4C4"
+      'linegrey' : "#E7E0FF" // Soft Lavender
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],

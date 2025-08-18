@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 /* TAILWIND CSS LINKS */
 @tailwind base;
 @tailwind components;
@@ -10,20 +9,206 @@
 
 body {
   margin: 0;
-  font-family: 'Urbanist', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  color: #49495A;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 25%, #e8f0ff 50%, #f0f4ff 75%, #f8f9ff 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
 }
+
+/* Custom color variables */
+:root {
+  --primary-accent: #2622B2; /* Deep Indigo - Primary headers, anchors */
+  --secondary-accent: #5955EB; /* Bright Violet - CTA buttons, highlights */
+  --tertiary-accent: #E7E0FF; /* Soft Lavender - Cards, sidebars, subtle accents */
+  --text-primary: #49495A; /* Charcoal Gray - Body text */
+  --text-secondary: #49495A; /* Charcoal Gray */
+  --background-light: #FBFAFF; /* Porcelain White */
+  --background-secondary: #FBFAFF; /* Porcelain White */
+}
+
+/* Metallic abstract backgrounds */
+.metallic-bg-primary {
+  background: 
+    linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #533483 75%, #8b5cf6 100%),
+    radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  position: relative;
+  overflow: hidden;
+}
+
+.metallic-bg-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%),
+    linear-gradient(0deg, transparent 0%, rgba(139, 92, 246, 0.2) 50%, transparent 100%);
+}
+
+.metallic-bg-secondary {
+  background: 
+    linear-gradient(135deg, #f8fafc 0%, #e2e8f0 25%, #cbd5e1 50%, #a5b4fc 75%, #8b5cf6 100%),
+    radial-gradient(circle at 30% 70%, rgba(139, 92, 246, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.3) 0%, transparent 50%);
+  position: relative;
+  overflow: hidden;
+}
+
+.metallic-bg-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(45deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%),
+    linear-gradient(-45deg, transparent 0%, rgba(139, 92, 246, 0.1) 50%, transparent 100%);
+}
+
+.metallic-bg-hero {
+  background: 
+    linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 25%, #cbd5e1 50%, #a5b4fc 75%, #8b5cf6 100%),
+    linear-gradient(90deg, rgba(89, 85, 235, 0.1) 0%, rgba(139, 92, 246, 0.05) 50%, rgba(147, 51, 234, 0.1) 100%),
+    radial-gradient(circle at 25% 75%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 75% 25%, rgba(255, 255, 255, 0.4) 0%, transparent 50%);
+  position: relative;
+  overflow: hidden;
+}
+
+.metallic-bg-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(60deg, transparent 0%, rgba(255, 255, 255, 0.15) 50%, transparent 100%),
+    linear-gradient(-60deg, transparent 0%, rgba(139, 92, 246, 0.1) 50%, transparent 100%);
+}
+
+.metallic-bg-dark {
+  background: 
+    linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 50%, #4c1d95 75%, #7c3aed 100%),
+    radial-gradient(circle at 40% 60%, rgba(124, 58, 237, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 60% 40%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  position: relative;
+  overflow: hidden;
+}
+
+.metallic-bg-dark::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(30deg, transparent 0%, rgba(255, 255, 255, 0.08) 50%, transparent 100%),
+    linear-gradient(-30deg, transparent 0%, rgba(124, 58, 237, 0.2) 50%, transparent 100%);
+  animation: metallic-shimmer 12s ease-in-out infinite;
+}
+
+.metallic-bg-light {
+  background: 
+    linear-gradient(135deg, #ffffff 0%, #f8fafc 25%, #f1f5f9 50%, #e0e7ff 75%, #c7d2fe 100%),
+    radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.5) 0%, transparent 50%);
+  position: relative;
+  overflow: hidden;
+}
+
+.metallic-bg-light::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(75deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%),
+    linear-gradient(-75deg, transparent 0%, rgba(139, 92, 246, 0.05) 50%, transparent 100%);
+  animation: metallic-shimmer 7s ease-in-out infinite reverse;
+}
+
+/* Light trails effect */
+.light-trails {
+  position: relative;
+  overflow: hidden;
+}
+
+.light-trails::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.8) 20%, rgba(255, 255, 255, 0.4) 40%, transparent 60%),
+    linear-gradient(0deg, transparent 0%, rgba(139, 92, 246, 0.6) 30%, rgba(139, 92, 246, 0.3) 60%, transparent 80%),
+    linear-gradient(45deg, transparent 0%, rgba(255, 255, 255, 0.6) 25%, transparent 50%),
+    linear-gradient(-45deg, transparent 0%, rgba(139, 92, 246, 0.4) 35%, transparent 65%);
+  animation: light-trails-move 15s linear infinite;
+  pointer-events: none;
+}
+
+/* Typography Classes */
+.font-headline {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.font-body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.font-data {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Legacy gradient backgrounds for compatibility */
+.gradient-bg-primary {
+  background: linear-gradient(135deg, #2622B2 0%, #5955EB 50%, #7C3AED 100%);
+}
+
+.gradient-bg-secondary {
+  background: linear-gradient(135deg, #E7E0FF 0%, #F3E8FF 50%, #F7F5FF 100%);
+}
+
+.gradient-bg-hero {
+  background: linear-gradient(135deg, #F7F5FF 0%, #E7E0FF 50%, #D1D5DB 100%);
+}
+
+.gradient-bg-dark {
+  background: linear-gradient(135deg, #1E1B4B 0%, #312E81 50%, #3730A3 100%);
+}
+
+.gradient-bg-light {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F9FAFB 50%, #F3F4F6 100%);
+}
+
+/* Animations removed for static design */
 
 html:not([data-scroll="0"]) .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: white !important;
-  opacity: 1.9;
+  background-color: #2622B2 !important;
+  opacity: 1;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
   transition: 0.4s linear;
   padding: 0px !important;
   /* height: 20px; */
-  z-index: 3;
+  z-index: 9999;
 }
 
 html:not([data-scroll="0"]) .navbar>div>div {
@@ -40,8 +225,9 @@ html {
 }
 
 .navbar {
-  border-bottom: 0.5px solid rgba(196, 196, 196, 0.75);
-  ;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.1);
+  background-color: #2622B2;
+  backdrop-filter: blur(10px);
 }
 
 .hover-underline {
@@ -108,6 +294,32 @@ html {
 
 .pd76 {
   padding-right: 76px !important;
+}
+
+/* Navigation improvements */
+.navlinks {
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.navlinks:hover {
+  transform: translateY(-1px);
+}
+
+.navlinks::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+  transform: translateX(-50%);
+}
+
+.navlinks:hover::after {
+  width: 80%;
 }
 
 .navbutton {
@@ -243,12 +455,13 @@ html {
 
 .footer-icons {
   box-shadow: 0px 19px 28px rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.15);
   border-radius: 50%;
   padding: 15px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
 }
 
 
@@ -258,6 +471,8 @@ html {
 
 .footer-icons:hover {
   transform: translateY(-8px);
+  background-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0px 25px 35px rgba(0, 0, 0, 0.15);
 }
 
 .space-links {

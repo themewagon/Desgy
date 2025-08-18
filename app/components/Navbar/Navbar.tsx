@@ -13,13 +13,13 @@ interface NavigationItem {
     current: boolean;
 }
 
-const navigation: NavigationItem[] = [
+const navigation = [
+    { name: 'WHAT WE DELIVER', href: '#approach-section', current: false },
+    { name: 'Our Services', href: '#services-section', current: false },
+    { name: 'Who Is It For', href: '#faq-section', current: false },
     { name: 'About Us', href: '#aboutus-section', current: false },
-    { name: 'Services', href: '#services-section', current: false },
-    { name: 'FAQ', href: '#faq-section', current: false },
-    { name: 'Blog', href: '#blog-section', current: false },
-    { name: 'Testimonial', href: '#testimonial-section', current: false },
-]
+    { name: 'FAQ', href: '#faq-questions-section', current: false },
+];
 
 function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')
@@ -39,8 +39,8 @@ const Navbar = () => {
                             {/* LOGO */}
 
                             <div className="flex flex-shrink-0 items-center border-right">
-                                <Link href="/" className='text-2xl sm:text-4xl font-semibold text-black'>
-                                    Desgy Solutions
+                                <Link href="/" className='text-xl sm:text-2xl lg:text-4xl font-semibold text-white'>
+                                    The Prism Lab
                                 </Link>
                             </div>
 
@@ -53,8 +53,9 @@ const Navbar = () => {
                                             key={item.name}
                                             href={item.href}
                                             className={classNames(
-                                                item.current ? 'bg-gray-900' : 'navlinks hover:text-black',
-                                                'px-3 py-4 rounded-md text-lg font-normal'
+                                                item.current ? 'bg-white/20 text-white' : 'text-white hover:text-white hover:bg-white/15',
+                                                'px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105',
+                                                item.name === 'WHAT WE DELIVER' ? 'font-data tracking-widest uppercase text-xs font-bold' : ''
                                             )}
                                             aria-current={item.href ? 'page' : undefined}
                                         >
@@ -64,7 +65,6 @@ const Navbar = () => {
                                 </div>
 
                             </div>
-                            {/* <button className='hidden lg:flex justify-end text-xl font-semibold bg-transparent py-4 px-6 lg:px-12 navbutton rounded-full hover:bg-navyblue hover:text-white'>Contact us</button> */}
                             <Contactusform />
                         </div>
 
@@ -74,7 +74,7 @@ const Navbar = () => {
                         {/* DRAWER ICON */}
 
                         <div className='block lg:hidden'>
-                            <Bars3Icon className="block h-6 w-6" aria-hidden="true" onClick={() => setIsOpen(true)} />
+                            <Bars3Icon className="block h-6 w-6 text-white cursor-pointer hover:text-white/80 transition-colors duration-200" aria-hidden="true" onClick={() => setIsOpen(true)} />
                         </div>
 
                         {/* DRAWER LINKS DATA */}

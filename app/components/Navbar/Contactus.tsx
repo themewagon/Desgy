@@ -49,9 +49,9 @@ const Contactusform = () => {
                     </button>
                 </div> */}
                 <div className='hidden lg:block'>
-                    <button type="button" className='justify-end text-xl font-semibold bg-transparent py-4 px-6 lg:px-12 navbutton rounded-full hover:bg-navyblue hover:text-white' onClick={openModal}>
-                        Contact Us
-                    </button>
+                    <Link href="#contactus-section" className='justify-end text-sm sm:text-base lg:text-lg font-semibold bg-white text-primary py-3 px-6 lg:px-8 rounded-full border-2 border-primary hover:bg-primary hover:text-white transition-all duration-200 font-body inline-block'>
+                        Contact us
+                    </Link>
                 </div>
             </div>
 
@@ -85,7 +85,7 @@ const Contactusform = () => {
                                     <div className="py-8 lg:py-8 px-4 mx-auto max-w-screen-md">
                                         <div className="flex flex-shrink-0 items-center justify-center">
                                             <Link href="/" className='text-2xl sm:text-4xl font-semibold text-black'>
-                                                Desgy Solutions
+                                                The Prism Lab
                                             </Link>
                                         </div>
                                         <p className="mb-8 lg:mb-16 mt-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Contact us now? Want to send us a feedback?</p>
