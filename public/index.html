@@ -18,9 +18,32 @@
         .bg-tertiary { background-color: #E7E0FF; }
         .bg-porcelain { background-color: #FBFAFF; }
         .text-grey { color: #49495A; }
+        .hover\:bg-primary\/90:hover { background-color: rgba(38, 34, 178, 0.9); }
+        .hover\:scale-105:hover { transform: scale(1.05); }
+        .transition-all { transition: all 0.3s ease; }
+        .duration-300 { transition-duration: 300ms; }
     </style>
 </head>
 <body class="font-body text-grey">
+    <!-- Navigation -->
+    <nav class="bg-primary text-white py-4">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold font-headline">The Prism Lab</div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#what-we-deliver" class="hover:text-white/80 transition-all">WHAT WE DELIVER</a>
+                    <a href="#services" class="hover:text-white/80 transition-all">Our Services</a>
+                    <a href="#who-is-it-for" class="hover:text-white/80 transition-all">Who Is It For</a>
+                    <a href="#about-us" class="hover:text-white/80 transition-all">About Us</a>
+                    <a href="#faq" class="hover:text-white/80 transition-all">FAQ</a>
+                </div>
+                <button class="bg-white text-primary font-semibold py-2 px-4 rounded-full text-sm transition-all duration-300 hover:scale-105">
+                    Contact us
+                </button>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="relative min-h-screen bg-gradient-to-br from-porcelain via-white to-tertiary flex items-center">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
@@ -39,7 +62,7 @@
     </section>
 
     <!-- What We Deliver Section -->
-    <section class="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-tertiary via-white to-tertiary/50">
+    <section id="what-we-deliver" class="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-tertiary via-white to-tertiary/50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12 sm:mb-16">
                 <div class="inline-flex items-center justify-center px-4 py-2 bg-primary/10 rounded-full mb-6">
@@ -65,6 +88,46 @@
                 <div class="bg-white rounded-2xl p-8 shadow-lg">
                     <h3 class="text-2xl font-bold text-primary mb-4 font-headline">Execution</h3>
                     <p class="text-grey">90-day programmes that embed AI into existing workflows for measurable outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 sm:py-20 lg:py-24 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 sm:mb-8 font-headline">
+                    Our Services
+                </h2>
+                <p class="text-xl text-grey max-w-3xl mx-auto">
+                    From quick wins to comprehensive transformation, we have programmes designed for every stage of your AI journey.
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-8">
+                <div class="bg-gradient-to-r from-tertiary to-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-primary mb-4 font-headline">AI Readiness Masterclasses</h3>
+                    <p class="text-grey mb-6">Practical training for business teams with half-day or full-day formats.</p>
+                    <button class="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105">
+                        Book a strategy call
+                    </button>
+                </div>
+                
+                <div class="bg-gradient-to-r from-tertiary to-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-primary mb-4 font-headline">AI Leadership Coaching</h3>
+                    <p class="text-grey mb-6">Clarity and confidence for decision-makers with monthly coaching sessions.</p>
+                    <button class="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105">
+                        Book a strategy call
+                    </button>
+                </div>
+                
+                <div class="bg-gradient-to-r from-tertiary to-white rounded-2xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold text-primary mb-4 font-headline">AI Revenue Launchpad (90 Days)</h3>
+                    <p class="text-grey mb-6">A structured enablement programme that delivers measurable outcomes.</p>
+                    <button class="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105">
+                        Book a strategy call
+                    </button>
                 </div>
             </div>
         </div>
