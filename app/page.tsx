@@ -1,3 +1,4 @@
+// The Prism Lab - AI Strategy and Execution for SMBs
 import Banner from './components/Banner'
 import Approach from './components/Approach'
 import Manage from './components/Manage'
