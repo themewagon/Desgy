@@ -1,11 +1,12 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Disable build process since we're using static HTML
+  skipTrailingSlashRedirect: true,
+  skipMiddlewareUrlNormalize: true,
   images: {
     unoptimized: true,
   },
-  // Use standard Next.js build output
-  distDir: '.next',
 };
 
 module.exports = nextConfig;
