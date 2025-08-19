@@ -1,13 +1,11 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
   images: {
     unoptimized: true,
   },
-  // Ensure the build output goes to out directory for static export
-  distDir: 'out',
+  // Use standard Next.js build output
+  distDir: '.next',
 };
 
 module.exports = nextConfig;
