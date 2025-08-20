@@ -8,7 +8,7 @@ interface FooterLink {
 }
 
 const footerLinks: FooterLink[] = [
-    { name: 'WHAT WE DELIVER', href: '#approach-section' },
+    { name: 'What We Deliver', href: '#approach-section' },
     { name: 'Our Services', href: '#services-section' },
     { name: 'Who Is It For', href: '#faq-section' },
     { name: 'About Us', href: '#aboutus-section' },

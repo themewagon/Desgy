@@ -9,7 +9,7 @@ interface NavigationItem {
 }
 
 const navigation = [
-    { name: 'WHAT WE DELIVER', href: '#approach-section', current: false },
+    { name: 'What We Deliver', href: '#approach-section', current: false },
     { name: 'Our Services', href: '#services-section', current: false },
     { name: 'Who Is It For', href: '#faq-section', current: false },
     { name: 'About Us', href: '#aboutus-section', current: false },
@@ -33,7 +33,7 @@ const Data = () => {
                                 className={classNames(
                                     item.current ? 'bg-white/20 text-white' : 'text-white hover:bg-white/15 hover:text-white',
                                     'block py-4 rounded-lg text-lg font-semibold transition-all duration-300',
-                                    item.name === 'WHAT WE DELIVER' ? 'font-data tracking-widest uppercase text-sm font-bold' : ''
+                                    item.name === 'What We Deliver' ? 'font-data tracking-widest small-caps-alt text-sm font-bold' : ''
                                 )}
                                 aria-current={item.current ? 'page' : undefined}
                             >

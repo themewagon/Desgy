@@ -37,7 +37,7 @@ const Approach = () => {
 
                 <div className='text-center mb-12 sm:mb-16 relative z-10'>
                     <div className="inline-flex items-center justify-center px-4 py-2 bg-primary/10 rounded-full mb-6">
-                        <span className='text-xs sm:text-sm font-semibold text-primary tracking-widest uppercase font-data'>WHAT WE DELIVER</span>
+                        <span className='text-xs sm:text-sm font-semibold text-primary tracking-widest small-caps-alt font-data'>What We Deliver</span>
                     </div>
                     <h2 className='text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-primary mb-6 sm:mb-8 font-headline bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent'>
                         Commercial impact first, not technology.

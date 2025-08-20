@@ -610,3 +610,25 @@ html {
 .manage > div:nth-child(2) h3 {
   color: #747474;
 }
+
+/* Custom Small Caps Styling */
+.small-caps {
+  font-variant: small-caps;
+  font-feature-settings: "smcp";
+  text-transform: lowercase;
+  font-size: 0.9em;
+  letter-spacing: 0.05em;
+}
+
+/* Alternative Small Caps Styling */
+.small-caps-alt {
+  text-transform: lowercase;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.small-caps-alt::first-letter {
+  font-size: 1.1em;
+  font-weight: 700;
+}

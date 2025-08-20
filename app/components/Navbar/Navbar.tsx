@@ -14,7 +14,7 @@ interface NavigationItem {
 }
 
 const navigation = [
-    { name: 'WHAT WE DELIVER', href: '#approach-section', current: false },
+            { name: 'What We Deliver', href: '#approach-section', current: false },
     { name: 'Our Services', href: '#services-section', current: false },
     { name: 'Who Is It For', href: '#faq-section', current: false },
     { name: 'About Us', href: '#aboutus-section', current: false },
@@ -55,7 +55,7 @@ const Navbar = () => {
                                             className={classNames(
                                                 item.current ? 'bg-white/20 text-white' : 'text-white hover:text-white hover:bg-white/15',
                                                 'px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105',
-                                                item.name === 'WHAT WE DELIVER' ? 'font-data tracking-widest uppercase text-xs font-bold' : ''
+                                                item.name === 'What We Deliver' ? 'font-data tracking-widest small-caps-alt text-xs font-bold' : ''
                                             )}
                                             aria-current={item.href ? 'page' : undefined}
                                         >
