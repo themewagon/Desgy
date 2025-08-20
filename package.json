@@ -1,8 +1,0 @@
-{
-  "name": "prism-lab-website",
-  "version": "1.0.0",
-  "description": "Static website for The Prism Lab",
-  "scripts": {
-    "build": "echo 'Static site - no build needed'"
-  }
-}
