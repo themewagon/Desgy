@@ -26,9 +26,6 @@ function classNames(...classes: string[]) {
 }
 
 const Navbar = () => {
-
-    const [isOpen, setIsOpen] = React.useState(false);
-
     return (
         <Disclosure as="nav" className="navbar">
             <>
@@ -74,14 +71,8 @@ const Navbar = () => {
                         {/* DRAWER ICON */}
 
                         <div className='block lg:hidden'>
-                            <Bars3Icon className="block h-6 w-6 text-white cursor-pointer hover:text-white/80 transition-colors duration-200" aria-hidden="true" onClick={() => setIsOpen(true)} />
+                            <Drawer />
                         </div>
-
-                        {/* DRAWER LINKS DATA */}
-
-                        <Drawer isOpen={isOpen} setIsOpen={setIsOpen}>
-                            <Drawerdata />
-                        </Drawer>
 
                     </div>
                 </div>
