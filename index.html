@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Prism Lab | AI Training, Strategy & Execution for SMBs</title>
     <meta name="description" content="Turn AI hype into outcomes for your business. AI training, strategy, and execution services for SMBs. Practical masterclasses, coaching, and 90-day programmes.">
-    <!-- Updated for Cloudflare Pages static deployment -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -23,17 +22,20 @@
         .hover\:scale-105:hover { transform: scale(1.05); }
         .transition-all { transition: all 0.3s ease; }
         .duration-300 { transition-duration: 300ms; }
+        .hero-bg { background-image: url('images/banner/banner.svg'); background-size: cover; background-position: center; }
+        .gradient-overlay { background: linear-gradient(135deg, rgba(251, 250, 255, 0.9) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(231, 224, 255, 0.9) 100%); }
     </style>
 </head>
 <body class="font-body text-grey">
     <!-- Navigation -->
-    <nav class="bg-primary text-white py-4">
+    <nav class="bg-primary text-white py-4 sticky top-0 z-50">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
                 <div class="text-xl font-bold font-headline">The Prism Lab</div>
                 <div class="hidden md:flex space-x-6">
                     <a href="#what-we-deliver" class="hover:text-white/80 transition-all">What We Deliver</a>
                     <a href="#services" class="hover:text-white/80 transition-all">Our Services</a>
+                    <a href="#about-us" class="hover:text-white/80 transition-all">About Us</a>
                     <a href="#contact" class="hover:text-white/80 transition-all">Contact</a>
                 </div>
                 <button class="bg-white text-primary font-semibold py-2 px-4 rounded-full text-sm transition-all duration-300 hover:scale-105">
@@ -44,8 +46,9 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen bg-gradient-to-br from-porcelain via-white to-tertiary flex items-center">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24">
+    <section class="relative min-h-screen hero-bg flex items-center">
+        <div class="absolute inset-0 gradient-overlay"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 relative z-10">
             <div class="max-w-4xl mx-auto text-center">
                 <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-6 sm:mb-8 font-headline">
                     Turn AI hype into outcomes for your business
@@ -76,15 +79,24 @@
             </div>
             
             <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <img src="images/digital/girldoodle.svg" alt="Training" class="w-8 h-8">
+                    </div>
                     <h3 class="text-2xl font-bold text-primary mb-4 font-headline">Training</h3>
                     <p class="text-grey">Practical masterclasses that upskill your teams with immediate productivity gains.</p>
                 </div>
-                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <img src="images/beliefs/swirls.svg" alt="Strategy" class="w-8 h-8">
+                    </div>
                     <h3 class="text-2xl font-bold text-primary mb-4 font-headline">Strategy</h3>
                     <p class="text-grey">Leadership coaching that sets clear priorities and aligns AI with commercial goals.</p>
                 </div>
-                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+                        <img src="images/dedicated/spiral.svg" alt="Execution" class="w-8 h-8">
+                    </div>
                     <h3 class="text-2xl font-bold text-primary mb-4 font-headline">Execution</h3>
                     <p class="text-grey">90-day programmes that embed AI into existing workflows for measurable outcomes.</p>
                 </div>
@@ -106,7 +118,10 @@
             
             <div class="max-w-4xl mx-auto space-y-8">
                 <div class="bg-gradient-to-r from-tertiary to-white rounded-2xl p-8 shadow-lg">
-                    <h3 class="text-2xl font-bold text-primary mb-4 font-headline">AI Readiness Masterclasses</h3>
+                    <div class="flex items-center mb-4">
+                        <img src="images/featured/feat1.jpg" alt="AI Readiness" class="w-16 h-16 rounded-lg mr-4">
+                        <h3 class="text-2xl font-bold text-primary font-headline">AI Readiness Masterclasses</h3>
+                    </div>
                     <p class="text-grey mb-6">Practical training for business teams with half-day or full-day formats.</p>
                     <button class="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105">
                         Book a strategy call
@@ -114,7 +129,10 @@
                 </div>
                 
                 <div class="bg-gradient-to-r from-tertiary to-white rounded-2xl p-8 shadow-lg">
-                    <h3 class="text-2xl font-bold text-primary mb-4 font-headline">AI Leadership Coaching</h3>
+                    <div class="flex items-center mb-4">
+                        <img src="images/featured/feat2.jpg" alt="AI Leadership" class="w-16 h-16 rounded-lg mr-4">
+                        <h3 class="text-2xl font-bold text-primary font-headline">AI Leadership Coaching</h3>
+                    </div>
                     <p class="text-grey mb-6">Clarity and confidence for decision-makers with monthly coaching sessions.</p>
                     <button class="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105">
                         Book a strategy call
@@ -122,11 +140,43 @@
                 </div>
                 
                 <div class="bg-gradient-to-r from-tertiary to-white rounded-2xl p-8 shadow-lg">
-                    <h3 class="text-2xl font-bold text-primary mb-4 font-headline">AI Revenue Launchpad (90 Days)</h3>
+                    <div class="flex items-center mb-4">
+                        <img src="images/team/teamimg.png" alt="AI Launchpad" class="w-16 h-16 rounded-lg mr-4">
+                        <h3 class="text-2xl font-bold text-primary font-headline">AI Revenue Launchpad (90 Days)</h3>
+                    </div>
                     <p class="text-grey mb-6">A structured enablement programme that delivers measurable outcomes.</p>
                     <button class="bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-full transition-all duration-300 hover:scale-105">
                         Book a strategy call
                     </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about-us" class="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-tertiary via-white to-tertiary/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary mb-6 sm:mb-8 font-headline">
+                    About The Prism Lab
+                </h2>
+                <p class="text-xl text-grey max-w-3xl mx-auto">
+                    We combine commercial execution and technical depth to help businesses turn AI hype into outcomes.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <div class="text-center">
+                    <img src="images/testimonial/user1.svg" alt="Marlene Vicaire" class="w-24 h-24 rounded-full mx-auto mb-6">
+                    <h3 class="text-2xl font-bold text-primary mb-4 font-headline">Marlene Vicaire</h3>
+                    <p class="text-grey mb-4">Commercial strategist with 20+ years in SaaS, consulting, and Go-To-Market leadership across APAC.</p>
+                    <p class="text-sm text-primary font-semibold">Certified in AI, change management, and human-centred design.</p>
+                </div>
+                <div class="text-center">
+                    <img src="images/testimonial/user2.svg" alt="Tamara Dinneen" class="w-24 h-24 rounded-full mx-auto mb-6">
+                    <h3 class="text-2xl font-bold text-primary mb-4 font-headline">Tamara Dinneen</h3>
+                    <p class="text-grey mb-4">Enterprise technology leader and AI/ML expert with 20+ years in product strategy and digital transformation.</p>
+                    <p class="text-sm text-primary font-semibold">Doctoral candidate in Artificial Intelligence and Machine Learning.</p>
                 </div>
             </div>
         </div>
@@ -152,8 +202,21 @@
     <!-- Footer -->
     <footer class="bg-primary py-8">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center text-white">
-                <p>&copy; 2025 The Prism Lab. All rights reserved.</p>
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="text-white mb-4 md:mb-0">
+                    <p>&copy; 2025 The Prism Lab. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-white hover:text-white/80 transition-all">
+                        <img src="images/footer/facebook.svg" alt="Facebook" class="w-6 h-6">
+                    </a>
+                    <a href="#" class="text-white hover:text-white/80 transition-all">
+                        <img src="images/footer/twitter.svg" alt="Twitter" class="w-6 h-6">
+                    </a>
+                    <a href="#" class="text-white hover:text-white/80 transition-all">
+                        <img src="images/footer/instagram.svg" alt="Instagram" class="w-6 h-6">
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
