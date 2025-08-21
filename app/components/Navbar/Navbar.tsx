@@ -2,9 +2,7 @@
 import { Disclosure } from '@headlessui/react';
 import Link from 'next/link';
 import React from 'react';
-import { Bars3Icon } from '@heroicons/react/24/outline';
 import Drawer from "./Drawer";
-import Drawerdata from "./Drawerdata";
 import Contactusform from './Contactus';
 
 interface NavigationItem {
@@ -14,7 +12,7 @@ interface NavigationItem {
 }
 
 const navigation = [
-            { name: 'What We Deliver', href: '#approach-section', current: false },
+    { name: 'What We Deliver', href: '#approach-section', current: false },
     { name: 'Our Services', href: '#services-section', current: false },
     { name: 'Who Is It For', href: '#faq-section', current: false },
     { name: 'About Us', href: '#aboutus-section', current: false },
@@ -54,7 +52,7 @@ const Navbar = () => {
                                                 'px-3 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105',
                                                 item.name === 'What We Deliver' ? 'font-data tracking-widest small-caps-alt text-xs font-bold' : ''
                                             )}
-                                            aria-current={item.href ? 'page' : undefined}
+                                            aria-current={item.current ? 'page' : undefined}
                                         >
                                             {item.name}
                                         </Link>
