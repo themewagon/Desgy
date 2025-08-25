@@ -1,4 +1,4 @@
-# MatDash – Free Tailwind CSS Admin Dashboard Template
+# DesgySolutions – Free TailwindCSS Business Website Template
 
 #### Preview
 
